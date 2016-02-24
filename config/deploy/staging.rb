@@ -1,3 +1,6 @@
+set :branch, "master"
+set :rails_env, :staging
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -59,3 +62,7 @@
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+
+ask(:password, nil, echo: false)
+
+server '52.36.186.149', user: 'spreenext', port: 22, password: fetch(:password), roles: %w{web app db}
