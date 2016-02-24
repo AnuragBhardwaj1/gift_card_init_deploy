@@ -5,6 +5,7 @@ gem 'rails', '4.2.5.1'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
+gem 'therubyracer', platforms: :ruby
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -19,11 +20,9 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'better_errors'
-  gem 'byebug'
+  gem 'capistrano'
+  gem 'capistrano-ext'
 end
-
-gem 'capistrano'
-gem 'capistrano-ext'
 
 gem 'spree', '3.0.4'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'

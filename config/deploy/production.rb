@@ -65,13 +65,15 @@ set :rails_env, :production
 
 ask(:password, nil, echo: false)
 
-server '54.191.137.116',
-  user: 'spreenext',
-  roles: %w{web app db},
-  ssh_options: {
-    user: 'ubuntu', # overrides user setting above
-    keys: %w(/home/user_name/.ssh/id_rsa),
+server '52.36.186.149', user: 'spreenext', port: 22, password: fetch(:password), roles: %w{web app db}
+# server '52.36.186.149',
+
+  # user: 'spreenext',
+  # roles: %w{web app db},
+  # ssh_options: {
+  #   user: 'ubuntu', # overrides user setting above
+  #   keys: %w(/home/user_name/.ssh/id_rsa),
     # forward_agent: false,
     # auth_methods: %w(publickey password)
     # password: 'please use keys'
-  }
+  # }
