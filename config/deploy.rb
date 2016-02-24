@@ -4,7 +4,7 @@ lock '3.4.0'
 set :application, 'gift_card_init_deploy'
 set :repo_url, 'git@github.com:AnuragBhardwaj1/gift_card_init_deploy.git'
 
-set :user, 'spreenext'
+# set :user, 'spreenext'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -16,10 +16,10 @@ set :scm, :git
 set :shared_path, "~/var/www/gift_card_init_deploy/shared"
 
 
-set :stages, ["production"]
+set :stages, ["production","staging"]
 
-set :linked_files, %w{config/database.yml config/secrets.yml }
-set :linked_dirs, %w{log public/system tmp/pids tmp/cache tmp/sockets vendor/bundle pids public/assets}
+set :linked_files, %w{ config/database.yml config/secrets.yml }
+set :linked_dirs, %w{ log public/system tmp/pids tmp/cache tmp/sockets vendor/bundle pids public/assets }
 
 # Default value for :format is :pretty
 # set :format, :pretty
