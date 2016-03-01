@@ -29,6 +29,7 @@
 /public/test_files
 /public/system/*
 /public/*.json
+/public/spree/*
 
 # misc
 /public

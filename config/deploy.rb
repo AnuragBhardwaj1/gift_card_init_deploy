@@ -12,9 +12,8 @@ set :repo_url, 'git@github.com:AnuragBhardwaj1/gift_card_init_deploy.git'
 set :deploy_to, '/var/www/gift_card_init_deploy'
 
 # Default value for :scm is :git
-set :scm, :git
-set :shared_path, "~/var/www/gift_card_init_deploy/shared"
-
+# set :scm, :git
+# set :shared_path, "~/var/www/gift_card_init_deploy/shared"
 
 set :stages, ["production","staging"]
 
@@ -43,14 +42,15 @@ set :linked_dirs, %w{ log public/system tmp/pids tmp/cache tmp/sockets vendor/bu
 set :keep_releases, 5
 
 namespace :deploy do
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      puts "Restarting application...."
+      execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
+  # after :publishing, :restart
+  after :finishing, 'deploy:cleanup'
+  after :publishing, 'deploy:restart'
 end
