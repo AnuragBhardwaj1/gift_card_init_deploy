@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mysql2'
 gem 'delayed_job_active_record',              '~> 4.0.3'
+gem 'daemons',                                '~> 1.1.9'
 
 
 group :development, :test do
