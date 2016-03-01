@@ -22,12 +22,13 @@ group :development do
   gem 'spring'
   gem 'better_errors'
   gem 'quiet_assets'
-  gem 'capistrano'
-  gem 'capistrano-ext'
+  gem 'capistrano',                           '~> 3.4.0'
+  gem 'capistrano-bundler',                   '~> 1.1.4'
+  gem 'capistrano-rails',                     '~> 1.1.2'
+  gem 'capistrano3-delayed-job',              '~> 1.0'
 end
 
 gem 'spree', '3.0.4'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
-
 gem 'spree_gift_card', github: 'vinsol/spree_gift_card', branch: 'ui_changes-3-0-stable'
