@@ -21,6 +21,7 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'better_errors'
+  gem 'quiet_assets'
   gem 'capistrano'
   gem 'capistrano-ext'
 end
@@ -29,4 +30,4 @@ gem 'spree', '3.0.4'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 
-gem 'spree_gift_card', github: 'mr-ado/spree_gift_card', branch: '3-0-stable'
+gem 'spree_gift_card', github: 'vinsol/spree_gift_card', branch: 'ui_changes-3-0-stable'
