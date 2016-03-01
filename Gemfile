@@ -15,7 +15,6 @@ gem 'mysql2'
 gem 'delayed_job_active_record',              '~> 4.0.3'
 gem 'daemons',                                '~> 1.1.9'
 
-
 group :development, :test do
   gem 'byebug'
 end
@@ -34,4 +33,4 @@ end
 gem 'spree', '3.0.4'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
-gem 'spree_gift_card', github: 'vinsol/spree_gift_card', branch: '3-0-stable'
+gem 'spree_gift_card', github: 'vinsol/spree_gift_card', branch: 'master'
