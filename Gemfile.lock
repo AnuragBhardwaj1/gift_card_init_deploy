@@ -20,7 +20,8 @@ GIT
 
 GIT
   remote: git://github.com/vinsol/spree_gift_card.git
-  revision: 3824dfae5aaf8389e42ab47a0b5e8fcc2c543919
+  revision: 2076cd2ccbb61bc21136b23aecf027b28bee647c
+  ref: 2076c
   branch: 3-0-stable
   specs:
     spree_gift_card (3.0.0.beta)
